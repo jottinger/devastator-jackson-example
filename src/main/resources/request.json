@@ -1,0 +1,15 @@
+{
+  "pagina": 1,
+  "total_de_paginas": 1,
+  "registros": 1,
+  "total_de_registros": 1,
+  "clientes_cadastro_resumido": [
+    {
+      "cnpj_cpf": "24.111.930\/0001-80",
+      "codigo_cliente": 2370765,
+      "codigo_cliente_integracao": "24111930000180",
+      "nome_fantasia": "Primeiro Cliente",
+      "razao_social": "Primeiro Cliente Ltda Me"
+    }
+  ]
+}
