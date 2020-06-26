@@ -15,14 +15,17 @@ public class Request {
         this.registrationSummaries = summaries;
     }
 
+    @JsonProperty("pagina")
     int page;
+    @JsonProperty("total_de_paginas")
     int totalPages;
+    @JsonProperty("registros")
     int registrations;
-
+    @JsonProperty("total_de_registros")
     int totalRegistrations;
+    @JsonProperty("clientes_cadastro_resumido")
     List<CustomerSummaryRegistration> registrationSummaries;
 
-    @JsonProperty("pagina")
     public int getPage() {
         return page;
     }
@@ -31,7 +34,6 @@ public class Request {
         this.page = page;
     }
 
-    @JsonProperty("total_de_paginas")
     public int getTotalPages() {
         return totalPages;
     }
@@ -40,7 +42,6 @@ public class Request {
         this.totalPages = totalPages;
     }
 
-    @JsonProperty("registros")
     public int getRegistrations() {
         return registrations;
     }
@@ -49,7 +50,6 @@ public class Request {
         this.registrations = registrations;
     }
 
-    @JsonProperty("total_de_registros")
     public int getTotalRegistrations() {
         return totalRegistrations;
     }
@@ -58,7 +58,6 @@ public class Request {
         this.totalRegistrations = totalRegistrations;
     }
 
-    @JsonProperty("clientes_cadastro_resumido")
     public List<CustomerSummaryRegistration> getRegistrationSummaries() {
         return registrationSummaries;
     }
