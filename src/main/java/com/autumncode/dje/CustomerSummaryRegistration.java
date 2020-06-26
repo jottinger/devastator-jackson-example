@@ -8,8 +8,8 @@ public class CustomerSummaryRegistration {
 
     public CustomerSummaryRegistration(String cnpjCPF, String clientCode, String clientIntegrationCode, String decoratedName, String socialName) {
         this.cnpjCPF = cnpjCPF;
-    //    this.clientCode = clientCode;
-    //    this.clientIntegrationCode = clientIntegrationCode;
+        //    this.clientCode = clientCode;
+        //    this.clientIntegrationCode = clientIntegrationCode;
         this.decoratedName = decoratedName;
         this.socialName = socialName;
     }
@@ -20,7 +20,7 @@ public class CustomerSummaryRegistration {
     //    String clientCode;
     //    @JsonProperty("codigo_cliente_integracao")
     //    String clientIntegrationCode;
-    //    @JsonProperty("nome_fantasia")
+    @JsonProperty("nome_fantasia")
     String decoratedName;
     @JsonProperty("razao_social")
     String socialName;
