@@ -1,6 +1,7 @@
 package com.autumncode.dje;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.IOException;
@@ -22,7 +23,9 @@ public class Main {
                 .writeValueAsString(sample));
 
         try(InputStream inputStream=Main.class.getResourceAsStream("/request.json")) {
-            Request request=new ObjectMapper().readValue(inputStream, Request.class);
+            Request request=new ObjectMapper()
+                    .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES,false)
+                    .readValue(inputStream, Request.class);
             System.out.println(request);
         }
     }

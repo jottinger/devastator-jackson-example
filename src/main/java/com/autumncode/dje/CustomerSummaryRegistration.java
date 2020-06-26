@@ -8,19 +8,23 @@ public class CustomerSummaryRegistration {
 
     public CustomerSummaryRegistration(String cnpjCPF, String clientCode, String clientIntegrationCode, String decoratedName, String socialName) {
         this.cnpjCPF = cnpjCPF;
-        this.clientCode = clientCode;
-        this.clientIntegrationCode = clientIntegrationCode;
+    //    this.clientCode = clientCode;
+    //    this.clientIntegrationCode = clientIntegrationCode;
         this.decoratedName = decoratedName;
         this.socialName = socialName;
     }
 
+    @JsonProperty("cnpj_cpf")
     String cnpjCPF;
-    String clientCode;
-    String clientIntegrationCode;
+    //    @JsonProperty("codigo_cliente")
+    //    String clientCode;
+    //    @JsonProperty("codigo_cliente_integracao")
+    //    String clientIntegrationCode;
+    //    @JsonProperty("nome_fantasia")
     String decoratedName;
+    @JsonProperty("razao_social")
     String socialName;
 
-    @JsonProperty("cnpj_cpf")
     public String getCnpjCPF() {
         return cnpjCPF;
     }
@@ -29,25 +33,22 @@ public class CustomerSummaryRegistration {
         this.cnpjCPF = cnpjCPF;
     }
 
-    @JsonProperty("codigo_cliente")
-    public String getClientCode() {
-        return clientCode;
-    }
+    //    public String getClientCode() {
+    //        return clientCode;
+    //    }
+    //
+    //    public void setClientCode(String clientCode) {
+    //        this.clientCode = clientCode;
+    //    }
+    //
+    //    public String getClientIntegrationCode() {
+    //        return clientIntegrationCode;
+    //    }
+    //
+    //    public void setClientIntegrationCode(String clientIntegrationCode) {
+    //        this.clientIntegrationCode = clientIntegrationCode;
+    //    }
 
-    public void setClientCode(String clientCode) {
-        this.clientCode = clientCode;
-    }
-
-    @JsonProperty("codigo_cliente_integracao")
-    public String getClientIntegrationCode() {
-        return clientIntegrationCode;
-    }
-
-    public void setClientIntegrationCode(String clientIntegrationCode) {
-        this.clientIntegrationCode = clientIntegrationCode;
-    }
-
-    @JsonProperty("nome_fantasia")
     public String getDecoratedName() {
         return decoratedName;
     }
@@ -56,7 +57,6 @@ public class CustomerSummaryRegistration {
         this.decoratedName = decoratedName;
     }
 
-    @JsonProperty("razao_social")
     public String getSocialName() {
         return socialName;
     }
@@ -69,8 +69,8 @@ public class CustomerSummaryRegistration {
     public String toString() {
         return "CustomerSummaryRegistration{" +
                 "cnpjCPF='" + cnpjCPF + '\'' +
-                ", clientCode='" + clientCode + '\'' +
-                ", clientIntegrationCode='" + clientIntegrationCode + '\'' +
+                //                ", clientCode='" + clientCode + '\'' +
+                //                ", clientIntegrationCode='" + clientIntegrationCode + '\'' +
                 ", decoratedName='" + decoratedName + '\'' +
                 ", socialName='" + socialName + '\'' +
                 '}';

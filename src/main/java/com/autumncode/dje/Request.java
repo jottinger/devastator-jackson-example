@@ -21,8 +21,8 @@ public class Request {
     int totalPages;
     @JsonProperty("registros")
     int registrations;
-    @JsonProperty("total_de_registros")
-    int totalRegistrations;
+    //@JsonProperty("total_de_registros")
+    //int totalRegistrations;
     @JsonProperty("clientes_cadastro_resumido")
     List<CustomerSummaryRegistration> registrationSummaries;
 
@@ -50,6 +50,7 @@ public class Request {
         this.registrations = registrations;
     }
 
+    /*
     public int getTotalRegistrations() {
         return totalRegistrations;
     }
@@ -57,6 +58,7 @@ public class Request {
     public void setTotalRegistrations(int totalRegistrations) {
         this.totalRegistrations = totalRegistrations;
     }
+    */
 
     public List<CustomerSummaryRegistration> getRegistrationSummaries() {
         return registrationSummaries;
@@ -72,7 +74,7 @@ public class Request {
                 "page=" + page +
                 ", totalPages=" + totalPages +
                 ", registrations=" + registrations +
-                ", totalRegistrations=" + totalRegistrations +
+                // ", totalRegistrations=" + totalRegistrations +
                 ", registrationSummaries=" + registrationSummaries +
                 '}';
     }
